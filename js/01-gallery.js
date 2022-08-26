@@ -10,6 +10,12 @@ galleryContainer.addEventListener("click", onGalleryClick);
 function onGalleryClick(event) {
   event.preventDefault();
   console.log(event.target.dataset.source);
+
+  const isElemImg = event.target.classList.contains("gallery__image");
+  if (!isElemImg) {
+    return;
+  }
+
   const instance = basicLightbox.create(`
     <img src='${event.target.dataset.source}'>
 `);

@@ -5,12 +5,6 @@ const galleryMarkUp = createCard(galleryItems);
 
 galleryContainer.insertAdjacentHTML("beforeend", galleryMarkUp);
 
-galleryContainer.addEventListener("click", onGalleryClick);
-
-function onGalleryClick(event) {
-  event.preventDefault();
-}
-
 let gallery = new SimpleLightbox("ul.gallery a", {
   captionsData: "alt",
   captionDelay: 250,
